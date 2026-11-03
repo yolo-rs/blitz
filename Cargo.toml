@@ -97,7 +97,7 @@ dioxus-cli-config = { version = "0.8.0-alpha.3" }
 dioxus-core-macro = { version = "0.8.0-alpha.3" }
 
 # Taffy + Parley + Fontations
-taffy = { git = "https://github.com/DioxusLabs/taffy", rev = "2fa3c26cab6de67496c62d555a8be063174ebb71", default-features = false, features = [
+taffy = { git = "https://github.com/DioxusLabs/taffy", rev = "12633a5b4323", default-features = false, features = [
     "std",
     "flexbox",
     "flexbox_balance",
@@ -326,8 +326,6 @@ vello_gpu = { git = "https://github.com/DioxusLabs/vello", branch = "devin/glifo
 # selectors = { path = "../stylo/selectors", package = "selectors" }
 
 # [patch.crates-io]
-# [patch."https://github.com/dioxuslabs/taffy"]
-# taffy = { path = "../taffy" }
 
 # [patch."https://github.com/linebender/parley"]
 # parley = { path = "../parley/parley" }
