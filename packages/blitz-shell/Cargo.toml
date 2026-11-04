@@ -12,6 +12,7 @@ rust-version.workspace = true
 
 [features]
 default = ["accessibility", "file-dialog"]
+clipboard = []
 accessibility = [
     "dep:accesskit",
     "dep:accesskit_xplat",
