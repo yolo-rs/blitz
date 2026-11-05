@@ -539,6 +539,9 @@ impl selectors::Element for BlitzNode<'_> {
             NonTSPseudoClass::MozMeterOptimum => false,
             NonTSPseudoClass::MozMeterSubOptimum => false,
             NonTSPseudoClass::MozMeterSubSubOptimum => false,
+            NonTSPseudoClass::MozTopmostModal => {
+                self.element_state().contains(ElementState::TOPMOST_MODAL)
+            }
         }
     }
 
