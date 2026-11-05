@@ -536,7 +536,8 @@ mod tests {
         let server = std::thread::spawn(move || {
             let (mut stream, _) = listener.accept().unwrap();
             let mut request = [0; 4096];
-            stream.read(&mut request).unwrap();
+            let read = stream.read(&mut request).unwrap();
+            assert!(read > 0, "client sent no request");
             stream.write_all(b"HTTP/1.1 404 Not Found\r\nContent-Type: text/css\r\nContent-Length: 15\r\nConnection: close\r\n\r\nbody{color:red}").unwrap();
         });
         let error = fetch(&format!("http://{addr}/missing.css")).unwrap_err();
